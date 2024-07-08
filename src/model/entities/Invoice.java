@@ -30,7 +30,7 @@ public class Invoice {
 	
 	public Double getTotalPayment() {
 //		Feito com get por uma situação possível de mudar a lógica da taxa futuamente
-		return getBasicPayment() - getTax();
+		return getBasicPayment() + getTax();
 	}
 	
 }
