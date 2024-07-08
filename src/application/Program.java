@@ -34,7 +34,7 @@ public class Program {
 		System.out.print("Entre com o preço por dia: ");
 		double pricePerDay = sc.nextDouble();
 		
-		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
+		RentalService rentalService = new RentalService(pricePerDay, pricePerHour, new BrazilTaxService());
 		
 //		BrazilTaxService taxService = new BrazilTaxService();
 //		
