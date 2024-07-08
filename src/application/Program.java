@@ -36,15 +36,11 @@ public class Program {
 		
 		RentalService rentalService = new RentalService(pricePerDay, pricePerHour, new BrazilTaxService());
 		
-//		BrazilTaxService taxService = new BrazilTaxService();
-//		
-//		System.out.println(taxService.tax(390.00));
-		
 		rentalService.processInvoice(cr);
 		
 		System.out.println("FATURA");
-		System.out.println("Pagamento básico: " + cr.getInvoice().getBasicPayment());
-		System.out.println("Imposto: " + cr.getInvoice().getTax());
+		System.out.println("Pagamento básico: " + String.format("%.2f", cr.getInvoice().getBasicPayment()));
+		System.out.println("Imposto: " + String.format("%.2f", cr.getInvoice().getTax()));
 		System.out.println("PagamentoTotal: " + cr.getInvoice().getTotalPayment());
 		
 		
